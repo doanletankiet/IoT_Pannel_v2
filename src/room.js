@@ -1,6 +1,6 @@
 //################################################################################################
-var roomApi = "http://localhost:3000/rooms";
-var deviceApi = "http://localhost:3000/thietbi";
+var roomApi = "https://api-iot-v2.onrender.com/rooms";
+var deviceApi = "https://api-iot-v2.onrender.com/thietbi";
 var urlParams = new URLSearchParams(window.location.search); // lấy param từ URL
 var devices = urlParams.get("room");
 var deviceArray = devices.split(",");
