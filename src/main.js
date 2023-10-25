@@ -105,18 +105,18 @@ function handleAddRoom() {
 }
 // info room
 
-function getInfoRoom() {
-  var options = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "User-agent": "Iot Pannel",
-    },
-  };
-  fetch(roomApi + "/" + id, options)
-    .then((res) => res.json())
-    .then(callback);
-}
+// function getInfoRoom() {
+//   var options = {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application/json",
+//       "User-agent": "Iot Pannel",
+//     },
+//   };
+//   fetch(roomApi + "/" + id, options)
+//     .then((res) => res.json())
+//     .then(callback);
+// }
 // đọc file ảnh rồi chuyển từ ảnh sang mã base64
 function handleFileRoom() {
   const preview = document.querySelector("#image-pre");
