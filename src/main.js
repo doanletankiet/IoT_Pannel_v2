@@ -1,4 +1,4 @@
-var roomApi = "http://localhost:3000/rooms";
+var roomApi = "https://api-iot-v2.onrender.com/rooms";
 // gọi danh sách room từ file json
 function getRooms(callback) {
   fetch(roomApi)
