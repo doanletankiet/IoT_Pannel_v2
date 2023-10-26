@@ -20,7 +20,10 @@ function createRoom(data,callback) {
   };
   fetch(roomApi, options)
     .then((res) => res.json())
-    .then(callback);
+    .then(function(){
+getRooms(renderRooms);
+      
+    });
 }
 // delete room với param id của room
 function handleDeleteRoom(id) {
