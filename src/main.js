@@ -9,7 +9,7 @@ function getRooms(callback) {
     });
 }
 // handle tạo room
-function createRoom(data) {
+function createRoom(data,callback) {
   var options = {
     method: "POST", // method tạo mới dữ liệu
     headers: {
@@ -20,7 +20,7 @@ function createRoom(data) {
   };
   fetch(roomApi, options)
     .then((res) => res.json())
-    .then(getRooms(renderRooms););
+    .then(callback);
 }
 // delete room với param id của room
 function handleDeleteRoom(id) {
@@ -44,7 +44,7 @@ function start() {
   handleAddRoom();
 }
 
-//start();
+
 //##############################################################################
 // Show list  room
 function renderRooms(rooms) {
@@ -133,3 +133,4 @@ function handleFileRoom() {
     reader.readAsDataURL(fileImage);
   }
 }
+start();
