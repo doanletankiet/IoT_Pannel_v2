@@ -9,7 +9,7 @@ function getRooms(callback) {
     });
 }
 // handle tạo room
-function createRoom(data, callback) {
+function createRoom(data) {
   var options = {
     method: "POST", // method tạo mới dữ liệu
     headers: {
@@ -20,7 +20,7 @@ function createRoom(data, callback) {
   };
   fetch(roomApi, options)
     .then((res) => res.json())
-    .then(callback);
+    .then(getRooms(renderRooms););
 }
 // delete room với param id của room
 function handleDeleteRoom(id) {
