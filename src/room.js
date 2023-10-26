@@ -60,7 +60,7 @@ function handleRoute(id) {
 }
 //################################################################################################
 // tạo thiết bị từ para data đầu vào
-function createDevice(data, callback) {
+function createDevice(data) {
   var options = {
     method: "POST",
     headers: {
@@ -71,7 +71,7 @@ function createDevice(data, callback) {
   };
   fetch(roomApi + "/" + deviceArray + "/" + "thietbi", options)
     .then((res) => res.json())
-    .then(callback);
+    .then( handleRoute(deviceArray););
 }
 // handler xử lý liên quan tới thêm thiết bị
 function handleAddDevice() {
