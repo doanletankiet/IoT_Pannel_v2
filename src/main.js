@@ -44,7 +44,7 @@ function start() {
   handleAddRoom();
 }
 
-start();
+//start();
 //##############################################################################
 // Show list  room
 function renderRooms(rooms) {
