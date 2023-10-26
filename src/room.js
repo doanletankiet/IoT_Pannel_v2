@@ -71,7 +71,10 @@ function createDevice(data) {
   };
   fetch(roomApi + "/" + deviceArray + "/" + "thietbi", options)
     .then((res) => res.json())
-    .then( handleRoute(deviceArray););
+    .then(
+      function () {
+      handleRoute(deviceArray);
+    });
 }
 // handler xử lý liên quan tới thêm thiết bị
 function handleAddDevice() {
